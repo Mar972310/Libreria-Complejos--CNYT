@@ -14,18 +14,7 @@ class TestComplexOperations(unittest.TestCase):
         resultado = lc.sumaC(a, b)
         self.assertEqual((-2, -8), resultado) 
         self.assertNotEqual((2, 8), resultado) 
-    
-    def test_suma1(self):
-        # a = 2i
-        # b = 4 - 10i
-        # (a1,a2) + (b1,b2) = ((a1+b1) , (a2+b2))
-        # Resultado esperado: 4 - 8i
-        a = [0, 2]
-        b = [4, -10]
-        resultado = lc.sumaC(a, b)
-        self.assertEqual((4, -8), resultado) 
-        self.assertNotEqual((2, 8), resultado) 
-    
+     
     def test_suma2(self):
         # a = 2i
         # b = 4 - 10i
@@ -184,9 +173,6 @@ class TestComplexOperations(unittest.TestCase):
         esperado = (0, 2) 
         self.assertAlmostEqual(esperado[0], resultado[0], places=9)
         self.assertAlmostEqual(esperado[1], resultado[1], places=9)
-
-
-
 
 if __name__ == '__main__':
     unittest.main()
